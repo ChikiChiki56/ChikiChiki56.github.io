@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+.myblock {
+    width: 400px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 4px;
+    margin: 30px;
+}
+.lemon {
+    background: url(https://cdn4.iconfinder.com/data/icons/Limon_iContainer/512/Grapefruit.png);
+    float: left;
+    background-size: contain;
+    background-position: 50%;
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.about-lemon h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+.about-lemon p {
+    font-size: 12px;
+    line-height: 150%;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: rgb(65, 132, 194) ;
+    border: none;
+    color: rgb(205, 203, 203);
+    padding: 25px 52px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center; 
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 1px 5px rgb(65, 149, 194);
+    margin-top: 20px;
+}

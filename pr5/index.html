@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .circle {
+        width: 200px; /* діаметр круга */
+        height: 200px; /* діаметр круга */
+        border-radius: 50%; /* круглий круг */
+        font-size: 24px; /* розмір тексту */
+        font-weight: bold; /* жирний текст */
+        text-align: center; /* вирівнювання тексту по центру */
+        line-height: 200px; /* вирівнювання тексту по вертикалі */
+        position: relative; /* для позиціонування псевдоелемента */
+        background: radial-gradient(circle at center, yellow 50%, blue 50%); /* градієнтний фон */
+        overflow: hidden; /* обрізаємо зайвий фон */
+    }
+
+    .circle::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%; /* ширина півкола */
+        height: 50%; /* висота півкола */
+        background: yellow; /* жовтий колір для фону */
+        z-index: -1; /* зміщення фону нижче тексту */
+    }
+
+</style>
+</head>
+<body>
+    <div class="circle">UA</div>
+</body>
+</html>

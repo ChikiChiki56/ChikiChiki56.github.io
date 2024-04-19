@@ -1,0 +1,188 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Зміна напрямку на вертикальний */
+    position: absolute; /* Встановлюємо позицію контейнера як absolute, щоб він вийшов зі звичайного потоку документа */
+    top: 50%; /* Розміщуємо верхню точку контейнера на 50% від верхнього краю вікна браузера */
+    left: 50%; /* Розміщуємо лівий край контейнера на 50% від лівого краю вікна браузера */
+    transform: translate(-50%, -50%);    
+    width: 1000px;
+    height: 500px;
+}
+.block {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    border: 1px solid rgb(201, 201, 201);
+}
+
+.circle1 {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position:absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%); /* Зсуваємо коло на 50% ширини вправо, щоб воно було посередині */
+    background: rgb(44, 182, 44);
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.circle3 {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    position:absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%); /* Зсуваємо коло на 50% ширини вправо, щоб воно було посередині */
+    background: transparent;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.circle2 {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+    position:absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%); /* Зсуваємо коло на 50% ширини вправо, щоб воно було посередині */
+    background: rgb(0, 140, 255);
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+.category {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    margin: 0 auto;
+    padding: 20px;
+    text-transform: uppercase;
+    color: rgb(179, 179, 179);
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    position:absolute;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 100%;
+    background: white;
+}
+
+.arrow_r {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    position:absolute;
+    top: 15%;
+    right: 0;
+    transform: translateX(50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(201, 201, 201);
+    border-radius: 100%;
+    background: white;
+}
+
+.line {
+    display: flex;
+    flex: content;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    flex: 1; 
+    height: 2px;
+    background-color: rgb(201, 201, 201);  
+}
+
+img {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+.itemname {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: rgb(0, 183, 255);
+    padding: 15px;
+    padding-bottom: 0px;
+
+}
+.price {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content:space-around;
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-top: 0px;
+}
+.container .section1 .first-button {
+    background: purple;
+    color: aliceblue;
+}
+
+button {
+    display: flex;
+    flex-direction: column; /* Зміна напрямку на вертикальний */
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+    background: rgb(228, 228, 36);
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: rgb(83, 156, 157);
+    color: azure;
+}

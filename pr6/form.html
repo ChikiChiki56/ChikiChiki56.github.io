@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concert Tickets Order</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: grid;
+        gap: 10px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #f3244a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #e10087;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Concert Tickets</h2>
+        <form action="#" method="post" id="orderForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="city">Місто:</label>
+            <select id="city" name="city" required onchange="setDate()">
+                <option value="" selected disabled>Вибрати місто</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Turin">Turin</option>
+                <option value="Hamburg">Hamburg</option>
+                <option value="Krakow">Kraków</option>
+            </select>
+
+            <label for="tickets">Кількість квитків:</label>
+            <input type="number" id="tickets" name="tickets" min="1" required>
+
+            <label for="date">Дата заходу:</label>
+            <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" required readonly>
+
+            <label for="comments">Коментар:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+<script>
+function setDate() {
+    var citySelect = document.getElementById("city");
+    var dateInput = document.getElementById("date");
+    var selectedCity = citySelect.value;
+    var date;
+
+    switch(selectedCity) {
+        case "Madrid":
+            date = "October 7, 2017";
+            break;
+        case "Turin":
+            date = "October 14, 2017";
+            break;
+        case "Hamburg":
+            date = "November 6, 2017";
+            break;
+        case "Krakow":
+            date = "November 12, 2017";
+            break;
+        default:
+            date = "";
+    }
+
+    dateInput.value = date;
+}
+</script>
+
+</body>
+</html>

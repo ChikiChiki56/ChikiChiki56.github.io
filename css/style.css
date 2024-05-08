@@ -138,18 +138,27 @@ li {
 }
 
 .section5 {
-    height: 100vh;
-    justify-content: center;
     align-items: center;
-    background-color: #a4a4a4;
+    justify-content: center;
+    background-color: #dedbdb;
+}
+
+.btncont {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: center;
+
 }
 
 .button1 {
+    width: 150px;
+    height: 50px;
     background-color: rgb(65, 132, 194) ;
-    border: none;
-    color: red;
-    padding: 25px 52px;
+    border-radius: 15px;
+    line-height: 50px;
     text-align: center;
+    margin: 15px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     text-decoration: none;
@@ -158,7 +167,10 @@ li {
     cursor: pointer;
     display: inline-block;
     box-shadow: 0px 1px 5px rgb(65, 149, 194);
-    margin-top: 20px;
+}
+
+.button1:hover {
+    background-color: rgb(87, 167, 243); /* Зміна кольору при наведенні */
 }
 
 h3 {

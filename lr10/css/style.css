@@ -1,8 +1,9 @@
-/* Загальні стилі */
 body {
     font-family: Raleway, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 p {
     font-size: 14px;
     color: #999;
@@ -29,18 +30,17 @@ h2, h3 {
 .container {
     width: 90%;
     max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .brand {
     font-size: 30px;
+    text-decoration: none;
 }
 
 .menu {
     padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .menu li {
@@ -59,10 +59,11 @@ img {
     height: auto;
 }
 
-/* Заголовок */
+
 header {
     background-color: #fff;
     padding-top: 30px;
+    overflow: hidden;
 }
 
 header .brand {
@@ -84,17 +85,14 @@ header .menu li a {
     color: #aaa;
 }
 
-/* Головна секція */
+
 .jumbotron {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
-    background-position: 0 0;
+    background-position: center;
     background-repeat: no-repeat;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    min-height: 250px;
+    padding: 80px 0;
     text-align: center;
-    clear: both;
 }
 
 .jumbotron .button {
@@ -109,58 +107,58 @@ header .menu li a {
     border-radius: 30px;
 }
 
-/* Секція послуг */
 .services {
     padding-top: 50px;
     text-align: center;
 }
 
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
 .services .service {
-    width: 100%; /* Зміна ширини для мобільного перегляду */
-    padding-left: 0; /* Видалення відступу для мобільного перегляду */
-    padding-right: 0; /* Видалення відступу для мобільного перегляду */
-    margin-top: 30px;
+    width: 33.333333%;
+    float: left;
+    padding: 0 15px;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
 
 .services .fa {
-    color: #979797;
+    font-size: 48px;
     margin-bottom: 15px;
+    color: #979797;
 }
 
-/* Блог */
+
 .blog {
     clear: both;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
     background-color: #fcfcfc;
 }
 
 .blog h2 {
+    font-size: 28px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .blog .post {
-    padding-top: 30px;
     display: inline-block;
     clear: both;
+    margin-bottom: 50px;
 }
 
 .blog .post img {
-    float: none; /* Зміна плаваючості для мобільного перегляду */
-    display: block; /* Зміна властивості блоку для мобільного перегляду */
-    margin: 0 auto 30px; /* Центрування для мобільного перегляду */
+    float: left;
+    margin-right: 30px;
 }
 
-/* Про нас */
+
 .about {
     background-color: #f9f9f9;
     padding: 50px 0;
-}
-
-.about .container {
-    text-align: center;
 }
 
 .about h2 {
@@ -176,22 +174,19 @@ header .menu li a {
     margin-bottom: 20px;
 }
 
-/* Підвал */
 footer {
-    clear: both;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
     text-align: center;
     background-color: #38404b;
 }
 
 footer .brand {
     color: #bcc9dd;
+    margin-bottom: 20px;
 }
 
 footer .menu li {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
 }
 
 footer .menu li a {
@@ -209,29 +204,25 @@ footer .copyright {
     color: #eee;
 }
 
-/* Медіазапити для мобільного перегляду */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 95%; /* Зміна ширини контейнера для мобільного перегляду */
-    }
 
-    .menu {
-        float: none; /* Видалення плаваючості для мобільного перегляду */
-        margin-top: 15px; /* Зміна відступу для мобільного перегляду */
-    }
 
-    .menu li {
-        float: none; /* Видалення плаваючості для мобільного перегляду */
-        display: inline-block; /* Зміна властивості для мобільного перегляду */
-        margin-left: 10px; /* Зміна відступу для мобільного перегляду */
-        margin-right: 10px; /* Зміна відступу для мобільного перегляду */
-    }
-
+@media (max-width: 575px) {
     .services .service {
-        width: 100%; /* Зміна ширини для мобільного перегляду */
+        width: 100%;
+        float: none;
     }
-
-    .jumbotron .button {
-        margin-top: 20px; /* Зміна відступу для мобільного перегляду */
+    .blog .post img {
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .blog .post {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
+
+

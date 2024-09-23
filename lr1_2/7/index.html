@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello from JavaScript!</title>
+    <script>
+        // 3.1: Відображає діалогове вікно при кліку
+        function showAlert() {
+            alert('Hello from onClick!');
+        }
+
+        // 3.2: Виводить фразу "Hello, world!" при наведенні на посилання
+        function sayHello() {
+            document.getElementById('output').innerHTML = "Hello, world!";
+        }
+
+        // 3.3: Виводить діалогове вікно, а після OK пише фразу
+        function showDialogAndPrint() {
+            alert('This is a dialog window!');
+            document.getElementById('output').innerHTML = "Hello, world!";
+        }
+
+        // 3.4: Запрошує у користувача інформацію та виводить її
+        function askInfo() {
+            let info = prompt('Enter some information:');
+            alert('You entered: ' + info);
+        }
+
+        // 3.5: Відображає діалогове вікно при наведенні, а введений текст — на сторінці
+        function askAndDisplay() {
+            let userInput = prompt('Please enter a text:');
+            if (userInput !== null) {
+                document.getElementById('output').innerHTML = userInput;
+            }
+        }
+
+        // 3.6: Складає два числа
+        function sumNumbers() {
+            let num1 = parseFloat(prompt('Enter the first number:'));
+            let num2 = parseFloat(prompt('Enter the second number:'));
+            let sum = num1 + num2;
+            document.getElementById('output').innerHTML = 'Sum: ' + sum;
+        }
+
+        // 3.7: Виводить найбільше з двох чисел
+        function findMax() {
+            let num1 = parseFloat(prompt('Enter the first number:'));
+            let num2 = parseFloat(prompt('Enter the second number:'));
+            let max = Math.max(num1, num2);
+            document.getElementById('output').innerHTML = 'Max: ' + max;
+        }
+
+        // 3.8: Виводить пору року за номером місяця
+        function findSeason() {
+            let month = parseInt(prompt('Enter the month number (1-12):'));
+            let season = '';
+            if (month >= 3 && month <= 5) {
+                season = 'Spring';
+            } else if (month >= 6 && month <= 8) {
+                season = 'Summer';
+            } else if (month >= 9 && month <= 11) {
+                season = 'Autumn';
+            } else {
+                season = 'Winter';
+            }
+            document.getElementById('output').innerHTML = 'Season: ' + season;
+        }
+
+        // 3.9: Виводить повідомлення, яка кнопка була натиснута
+        function confirmAction() {
+            if (confirm('Do you agree?')) {
+                document.getElementById('output').innerHTML = 'You pressed OK!';
+            } else {
+                document.getElementById('output').innerHTML = 'You pressed Cancel!';
+            }
+        }
+
+        // 3.10: Запитує прізвища та імена студентів і виводить їх
+        function collectStudents() {
+            let numStudents = parseInt(prompt('How many students in the group?'));
+            let students = '';
+            for (let i = 0; i < numStudents; i++) {
+                let name = prompt('Enter the name of student ' + (i + 1) + ':');
+                students += name + '<br>';
+            }
+            document.getElementById('output').innerHTML = students;
+        }
+
+        // 3.11: Запитує прізвища та імена, доки користувач не натисне "Відміна"
+        function collectNamesUntilCancel() {
+            let names = '';
+            let input;
+            while (true) {
+                input = prompt('Enter a name:');
+                if (input === null) break;
+                names += input + '<br>';
+            }
+            document.getElementById('output').innerHTML = names;
+        }
+
+        // 3.12: Виводить таблицю множення
+        function multiplicationTable() {
+            let table = '<table border="1">';
+            for (let i = 1; i <= 10; i++) {
+                table += '<tr>';
+                for (let j = 1; j <= 10; j++) {
+                    table += '<td>' + (i * j) + '</td>';
+                }
+                table += '</tr>';
+            }
+            table += '</table>';
+            document.getElementById('output').innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Test</h1>
+    <hr>
+    <!-- 3.1: Діалог при кліку -->
+    <a href="#" onclick="showAlert(); return false;">Click me for alert</a><br><br>
+
+    <!-- 3.2: Фраза при наведенні -->
+    <a href="#" onmouseover="sayHello(); return false;">Hover over me for "Hello, world!"</a><br><br>
+
+    <!-- 3.3: Діалог, а потім фраза -->
+    <a href="#" onclick="showDialogAndPrint(); return false;">Click me for a dialog and a message</a><br><br>
+
+    <!-- 3.4: Запит інформації -->
+    <a href="#" onclick="askInfo(); return false;">Click to enter information</a><br><br>
+
+    <!-- 3.5: Виведення введеної інформації після наведення -->
+    <a href="#" onmouseover="askAndDisplay(); return false;">Hover to input and display text</a><br><br>
+
+    <!-- 3.6: Додавання двох чисел -->
+    <button onclick="sumNumbers();">Add two numbers</button><br><br>
+
+    <!-- 3.7: Пошук найбільшого числа -->
+    <button onclick="findMax();">Find the largest of two numbers</button><br><br>
+
+    <!-- 3.8: Назва пори року -->
+    <button onclick="findSeason();">Find season by month</button><br><br>
+
+    <!-- 3.9: Confirm з повідомленням -->
+    <button onclick="confirmAction();">Confirm action</button><br><br>
+
+    <!-- 3.10: Введення імен студентів -->
+    <button onclick="collectStudents();">Collect student names</button><br><br>
+
+    <!-- 3.11: Введення імен, доки не натиснуть "Відміна" -->
+    <button onclick="collectNamesUntilCancel();">Collect names until Cancel</button><br><br>
+
+    <!-- 3.12: Таблиця множення -->
+    <button onclick="multiplicationTable();">Show multiplication table</button><br><br>
+
+    <hr>
+    <div id="output"></div>
+</body>
+</html>

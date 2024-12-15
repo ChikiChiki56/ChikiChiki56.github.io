@@ -1,0 +1,3202 @@
+body {
+    margin: 0;
+    font-family: Urbanist, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    line-height: 1.5;
+}
+.banner {
+    background-color: #1a1a1a;
+    background-image: url('../img/BACKGROUND.svg'); /* Додаємо фон у вигляді зображення */
+    background-size: cover; /* Зображення покриває весь блок */
+    background-position: center; /* Центруємо зображення */
+    background-repeat: no-repeat; /* Забороняємо повторення */
+    padding: 18px 80px; /* Аналогічно */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+.banner .abstract-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url('../img/Abstract Design.svg');
+    background-size: cover; /* Зображення покриває весь блок */
+    background-position: center; /* Центруємо зображення */
+    background-repeat: no-repeat; /* Забороняємо повторення */
+    opacity: 0.1;
+}
+.banner .text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    z-index: 1;
+}
+.banner .text-button {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: underline;
+    margin-left: 10px;
+    z-index: 1;
+}
+.banner .close-button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+.navbar {
+    background-color: #1a1a1a;
+    padding: 20px 80px; /* Зменшено відступи */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.navbar .logo {
+    width: 160px;
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    width: 48px;
+    height: 48px;
+}
+.navbar .logo-text {
+    font-size: 20.52px;
+    margin-left: 10px;
+}
+.navbar .menu {
+    display: flex;
+    gap: 30px;
+}
+.navbar .menu-item {
+    font-weight: 500;
+    font-size: 18px;
+}
+.navbar .contacts-button {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #141414;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navbar .contacts-button .text {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menu {
+    pointer-events: auto;
+    z-index: 10; /* Задайте пріоритет, якщо елементи накладаються */
+}
+
+.menu-item {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none; /* Забороняємо підкреслення */
+    padding: 5px 10px; /* Вирівнюємо відступи */
+}
+
+.menu-item:hover {
+    color: #f0a500; /* Зміна кольору при наведенні */
+}
+
+
+
+
+.container {
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Рівномірний розподіл */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px; /* Відступи для мобільних */
+    box-sizing: border-box;
+}
+
+
+.text-container {
+    flex: 1; /* Дозволяє блоку займати половину ширини */
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 50%; /* Лімітує ширину текстового блоку */
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    line-height: 1.5;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центруємо кнопки */
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина кнопки */
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.button.learn-more {
+    border: 1px solid #262626;
+}
+
+.button.browse-properties {
+    background-color: #703bf7;
+}
+
+
+
+.stat-card {
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    flex: 1 1 calc(50% - 20px); /* Кожна картка займає 50% ширини мінус відступи */
+    padding-left: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px; /* Відступи між картками */
+    
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.stat-label {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    line-height: 1.5;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    aspect-ratio: 1; /* Додаємо співвідношення сторін */
+    height: auto;
+    background-image: url('../img/Image.svg');
+    background-size: contain; /* Забезпечує повний показ зображення без обрізання */
+    background-position: center; /* Центрує зображення в межах контейнера */
+    background-repeat: no-repeat; /* Запобігає повторенню зображення */
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 20px;
+}
+
+.icons-container-before {
+
+    border-top: 10px solid #262626;
+    border-bottom: 10px solid #262626;
+
+}
+
+
+.icon-card {
+    flex: 1 1 22%; /* Кожна іконка займає 22% ширини */
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #262626;
+}
+
+
+.icon-card img {
+    width: 62px; /* Розмір іконки */
+    height: 62px;
+    margin-bottom: 20px; /* Відступ під іконкою для тексту */
+}
+
+.icon-card-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+}
+
+
+
+/*2га секція*/
+
+.container2 {
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text-container {
+    max-width: 1181px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.heading2 {
+    font-weight: 600;
+    font-size: 48px;
+}
+.paragraph2 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.button {
+    padding: 18px 24px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 50px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє перенос на новий рядок */
+    gap: 20px;
+    padding: 0 20px; /* Додає внутрішній відступ */
+    box-sizing: border-box;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Адаптивна ширина */
+    max-width: 100%; /* Заборона виходу за межі */
+}
+.stars {
+    display: flex;
+    gap: 10px;
+}
+.stars img {
+    width: 44px;
+    height: 44px;
+}
+.card-heading {
+    font-weight: 600;
+    font-size: 24px;
+}
+.card-paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+.profile {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.profile-name {
+    font-weight: 500;
+    font-size: 20px;
+}
+.profile-location {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #262626;
+}
+.pagination-text {
+    font-weight: 500;
+    font-size: 20px;
+    color: #999;
+}
+.pagination-buttons {
+    display: flex;
+    gap: 10px;
+}
+.pagination-button {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pagination-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/*3тя секція*/
+
+.container3 {
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Зменшено для кращого вигляду */
+}
+
+.header3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Вирівнюємо кнопку з текстом по центру */
+    gap: 20px;
+}
+
+.text-container3 {
+    max-width: 1181px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.heading3 {
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.paragraph3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+
+.button3 {
+    padding: 14px 24px; /* Зменшено padding для пропорційності */
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    align-self: center; /* Центрування кнопки у відповідності до тексту */
+}
+
+.cards3 {
+    display: flex;
+    gap: 30px; /* Зменшено gap для більш компактного вигляду */
+    justify-content: space-between; /* Вирівнювання карток по горизонталі */
+    flex-wrap: wrap; /* Додаємо можливість переносу карток на новий рядок */
+}
+
+.card3 {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 40px; /* Зменшено padding для пропорційності */
+    width: calc(33.33% - 30px); /* Розрахункова ширина для розташування трьох карток */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Зменшено gap між елементами в картці */
+    box-sizing: border-box;
+}
+
+.card-heading3 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.card-paragraph3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999; /* Виправлено на світліший колір */
+}
+
+.read-more3 {
+    padding: 14px 20px; /* Скориговано padding */
+    background-color: #1a1a1a; /* Змінено на темний фон */
+    border: 1px solid #262626; /* Додано темний обвід */
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff; /* Білий текст */
+    cursor: pointer;
+    align-self: flex-start; /* Вирівнювання кнопки до початку */
+}
+
+.pagination3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #262626;
+}
+
+.pagination-text3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #999;
+}
+
+.pagination-buttons3 {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination-button3 {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #1a1a1a; /* Фон для активної кнопки */
+}
+
+.pagination-button3 img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/*section666*/
+
+.container6 {
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.header6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.text-container6 {
+    max-width: 1200px;
+}
+.heading6 {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+.paragraph6 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.button6 {
+    padding: 18px 24px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.cards6 {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє перенесення карток */
+    gap: 20px; /* Зменшуємо проміжок для зручності */
+    justify-content: center; /* Центруємо картки */
+    padding: 0 10px; /* Додаємо внутрішній відступ */
+    box-sizing: border-box;
+}
+
+.card6 {
+    flex: 1 1 calc(33.333% - 20px); /* Три картки в рядок */
+    max-width: calc(33.333% - 20px); /* Максимальна ширина */
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 20px; /* Зменшуємо padding для адаптивності */
+    box-sizing: border-box;
+}
+
+.card6 img {
+    display: block;
+    width: 100%; /* Адаптивне зображення */
+    height: auto; /* Пропорційна висота */
+    border-radius: 8px;
+}
+.card6 .card-heading6 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+.card6 .card-paragraph6 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 30px;
+}
+.tag-container6 {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяємо перенесення тегів */
+    gap: 10px; /* Відстань між плашками */
+    justify-content: flex-start; /* Вирівнюємо плашки по початку блоку */
+    box-sizing: border-box; /* Забезпечує коректні розрахунки ширини */
+}
+
+.tag6 {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(33.333% - 10px); /* Три плашки в рядок */
+    max-width: calc(33.333% - 10px); /* Максимальна ширина */
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 28px;
+    padding: 8px 10px; /* Внутрішні відступи */
+    font-size: 16px; /* Трохи зменшуємо текст для адаптивності */
+    color: #fff;
+    white-space: nowrap; /* Забороняємо перенесення тексту */
+    overflow: hidden; /* Приховуємо надлишок тексту */
+    text-overflow: ellipsis; /* Додаємо три крапки для довгого тексту */
+    gap: 5px; /* Відстань між іконкою та текстом */
+    box-sizing: border-box;
+}
+
+.tag6 img {
+    width: 16px; /* Зменшуємо розмір іконки для адаптивності */
+    height: 16px;
+    flex-shrink: 0; /* Іконка не зменшується відносно тексту */
+}
+
+
+
+.price-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price6 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+.view-details6 {
+    padding: 18px 24px;
+    background-color: #703bf7;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.pagination6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #262626;
+}
+.pagination-text6 {
+    font-size: 20px;
+    color: #999;
+}
+.pagination-buttons6 {
+    display: flex;
+    gap: 10px;
+}
+.pagination-button6 {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pagination-button6 img {
+    width: 30px;
+    height: 30px;
+}
+
+/*Foocecrt666*/
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 162px;
+    position: relative;
+    overflow: hidden;
+}
+.cta-container .abstract-design-left4 {
+    position: absolute;
+    left: 0;
+    width: 566px;
+    height: 308px;
+    background-image: url('../img/Abstract_Design_Left.svg');
+    opacity: 0.1;
+    z-index: 0;
+}
+.cta-container .abstract-design-right4 {
+    position: absolute;
+    right: 0;
+    width: 725px;
+    height: 394px;
+    background-image: url('../img/Abstract_Design_Right.svg');
+    opacity: 0.1;
+    z-index: 0;
+}
+.text-content4 {
+    max-width: 1154px;
+    z-index: 1;
+}
+.heading4 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+.paragraph4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+.cta-button {
+    padding: 18px 24px;
+    background-color: #703bf7;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/*About*/
+/*1 container*/
+.container_About_1 {
+    display: flex;
+    width: 100%;
+    max-width: 1590px;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 80px;
+    box-sizing: border-box;
+}
+.text-section_About_1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.heading {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.stat-box {
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    flex: 1;
+}
+.stat-number {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #fff;
+}
+.stat-description {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+.image-section_About_1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.image-section_About_1 img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/*2 container*/
+.container_About_2 {
+    display: flex;
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+.text-container_About_2 {
+    flex: 1;
+    margin-right: 80px;
+}
+.heading_About_2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph_About_2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    margin-top: 14px;
+}
+.values-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px;
+    background-color: #141414;
+    border: 1px solid #262626; /* Основний бордер */
+    border-radius: 12px;
+    position: relative;
+    z-index: 1; /* Щоб контент був над псевдоелементом */
+}
+
+.values-container::after {
+    content: '';
+    position: absolute;
+    top: -6px; /* Відступ для створення прозорого бордера */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 18px; /* Збільшений радіус для зовнішнього бордера */
+    border: 6px solid rgba(255, 255, 255, 0.1); /* Прозорий бордер із легким білим відтінком */
+    pointer-events: none; /* Щоб не блокувати взаємодію з контентом всередині */
+    z-index: 0; /* Щоб зовнішній бордер був під основним блоком */
+}
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Прозора біла лінія для розділення */
+    margin: 30px 0; /* Відступи для зручного вигляду */
+}
+
+.values-group {
+    display: flex;
+    gap: 30px;
+    position: relative; /* Для позиціонування псевдоелементу */
+}
+
+.values-group::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Центруємо лінію між двома картками */
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1); /* Легкий білий відтінок для прозорої лінії */
+    transform: translateX(-50%); /* Щоб лінія точно була по центру */
+    pointer-events: none; /* Щоб не блокувати взаємодію з контентом */
+    z-index: 1; /* Щоб лінія була на передньому плані */
+}
+.value-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.value-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.icon-container_About_2 {
+    width: 74px;
+    height: 74px;
+    background-color: #141414;
+    border: 1px solid #703bf7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container_About_2 img {
+    width: 34px;
+    height: 34px;
+}
+.value-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+}
+.value-paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+/*3 container*/
+.container_About_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1597px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.text-container_About_3 {
+    text-align: center;
+    max-width: 1297px;
+    padding-right: 300px;
+}
+.heading_About_3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph_About_3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    margin-top: 14px;
+}
+.cards-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+}
+.card {
+    background-color: #141414;
+    border: 1px solid #262626; /* Основний бордер */
+    border-radius: 12px;
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative; /* Щоб псевдоелемент міг використовувати позицію контейнера */
+    z-index: 1; /* Щоб контент був над псевдоелементом */
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: -6px; /* Відступи для створення простору навколо основного блоку */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 18px; /* Збільшуємо радіус для ефекту зовнішнього бордера */
+    border: 6px solid rgba(25, 25, 25, 1); /* Прозорий бордер із легким білим відтінком */
+    pointer-events: none; /* Щоб не блокувати взаємодію з контентом всередині */
+    z-index: 0; /* Щоб бордер був під основним блоком */
+}
+.card-heading {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+}
+.card-paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+/*4 container*/
+.container_About_4 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1597px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.text-container_About_4 {
+    margin-bottom: 40px;
+    padding-right: 300px;
+}
+.heading_About_4 {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+.paragraph_About_4 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch; /* Вирівнювання висоти всіх елементів */
+}
+
+.step-card {
+    width: calc(33.333% - 20px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Робимо так, щоб вміст блоку розміщувався вертикально */
+}
+
+
+
+.step-header {
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.gradient-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Висота градієнтної лінії */
+    background: linear-gradient(to right, rgba(112,59,247,1) 0%, rgba(112,59,247,0) 100%);
+    border-radius: 12px 12px 0 0; /* Закруглення для верхніх кутів */
+}
+.step-body {
+    flex-grow: 1; /* Вирівнюємо висоту всіх step-body, щоб заповнити весь простір */
+    position: relative;
+    padding: 50px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.step-body::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(112, 59, 247, 0.316) 0%, rgba(112, 59, 247, 0) 15%, #26262600 100%);
+    z-index: 1;
+    pointer-events: none; /* Щоб не блокувати взаємодію з контентом всередині блоку */
+}
+
+.step-body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    padding: 1px; /* Робимо видимий простір для градієнтної рамки */
+    background: linear-gradient(135deg, rgba(112, 59, 247, 1) 0%, rgba(112, 59, 247, 0) 50%, #262626 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude; /* Використовуємо для відображення лише бордеру */
+    z-index: 2; /* Розташовуємо градієнтний бордер поверх псевдоелемента ::before */
+}
+
+.step-body-content {
+    position: relative;
+    z-index: 3; /* Контент блоку має бути поверх градієнта */
+}
+.step-title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.step-description {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+/*5 container*/
+.container_About_5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1597px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.text-container_About_5 {
+    text-align: center;
+    max-width: 1297px;
+    padding-right: 300px;
+}
+.heading_About_5 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph_About_5 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    margin-top: 14px;
+}
+.team-cards {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+.card_About_5 {
+    padding: 30px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    max-width: 376.75px;
+    position: relative; /* Для позиціонування іконки всередині цього блоку */
+}
+
+.social-icon_About_5 {
+    position: absolute;
+    bottom: 45%; /* Встановлюємо іконку на краю фотографії */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76px; /* Розмір фіолетового кола */
+    height: 52px;
+    background-color: #703bf7; /* Фіолетовий колір фону */
+    border-radius: 43px; /* Робимо іконку круглою */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-image: url('../img/twitter_violet.svg');
+
+    background-position: center; /* Центруємо зображення */
+    background-repeat: no-repeat; /* Забороняємо повторення */
+
+}
+/*
+.social-icon_About_5 img {
+    width: 24px;
+    height: 24px;
+}
+*/
+
+.card_About_5 img {
+    width: 100%;
+    height: 253px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.role {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.say-hello {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 100px;
+    padding: 14px 24px;
+    border: 1px solid #262626;
+    cursor: pointer;
+}
+.say-hello-text {
+    flex: 1;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+}
+.say-hello-button {
+    width: 44px;
+    height: 44px;
+    background-color: #703bf7;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.say-hello-button img {
+    width: 24px;
+    height: 24px;
+}
+/*6 container*/
+.container_About_6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1597px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.text-container_About_6 {
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    max-width: 1297px;
+    padding-right: 300px;
+    width: 100%; /* Додано, щоб контейнер займав всю ширину */
+    padding-left: 20px; /* Додано для відступу зліва */
+}
+.heading_About_6 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph_About_6 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    margin-top: 14px;
+}
+.cards-container_About_6 {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.card_About_6 {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+    max-width: 773.5px;
+}
+.card-header_About_6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.since {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.company-name {
+    font-weight: 600;
+    font-size: 30px;
+}
+.visit-website {
+    padding: 18px 24px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.details {
+    display: flex;
+    gap: 30px;
+}
+.detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.detail-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.detail-content {
+    font-weight: 500;
+    font-size: 20px;
+}
+.testimonial {
+    padding: 30px;
+    border: 1px solid #262626;
+    border-radius: 12px;
+}
+.testimonial-title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 14px;
+}
+.testimonial-text {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+/* About End*/
+
+/* Properties Start*/
+
+/* 1 container */
+.hero-section {
+    position: relative;
+    text-align: left;
+    padding: 100px 5% 120px 5%; /* Гнучкі відступи */
+    background: linear-gradient(95.93deg, rgba(38, 38, 38, 1) 26.83%, rgba(38, 38, 38, 0) 40.46%);
+    max-width: 100%; /* Займає всю доступну ширину */
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 90%; /* Гнучка ширина контенту */
+    margin: 0 auto; /* Центрування контенту */
+}
+
+.hero-title {
+    font-size: 48px; /* Розмір шрифту залежить від ширини екрану */
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.hero-paragraph {
+    font-size: 18px; /* Розмір шрифту залежить від ширини екрану */
+    font-weight: 500;
+    line-height: 150%;
+    color: #999999;
+}
+.container_properties_1 {
+    padding: 0 5%; /* Адаптивні відступи */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    max-width: 100%; /* Займає всю ширину екрану */
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+/* Пошуковий рядок */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #141414;
+    flex-wrap: wrap; /* Дозволяє переносити елементи на новий рядок */
+}
+
+/* Поле вводу */
+.search-bar input {
+    background-color: #141414;
+    border: none;
+    color: #666666;
+    padding: 10px 16px; /* Менші відступи для мобільних */
+    flex-grow: 1;
+    font-size: 18px; /* Зменшений розмір шрифту */
+    line-height: 1.5;
+    font-family: 'Urbanist', sans-serif;
+    margin-bottom: 10px; /* Відступ для мобільної версії */
+}
+
+/* Текст-заповнювач */
+.search-bar input::placeholder {
+    color: #666666;
+}
+
+/* Кнопка пошуку */
+.search-bar button {
+    background-color: #703bf7;
+    border: none;
+    color: white;
+    padding: 10px 16px; /* Зменшені відступи */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%; /* Займає всю ширину на мобільних */
+    max-width: 300px; /* Ліміт для великих екранів */
+    margin: 0 auto; /* Центрування на мобільних */
+}
+
+/* Іконка кнопки */
+.search-bar button img {
+    margin-right: 8px;
+}
+
+/* Текст кнопки */
+.search-button-text {
+    font-size: 16px; /* Зменшений розмір шрифту */
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-radius: 12px;
+    margin: 0 auto; /* Центруємо блок */
+    max-width: 100%; /* Встановлюємо максимальну ширину для адаптивності */
+    gap: 10px; /* Відступи між елементами */
+    flex-wrap: wrap; /* Дозволяємо елементам переноситись на новий рядок */
+    box-sizing: border-box;
+    padding: 10px 20px; /* Адаптивні відступи */
+}
+
+/* Елемент фільтру */
+.filter-item {
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    color: #999999;
+    padding: 10px 16px; /* Зменшені відступи для мобільних пристроїв */
+    border-radius: 12px;
+    min-width: auto; /* Прибираємо фіксовану ширину */
+    border: 1px solid #262626;
+    justify-content: space-between;
+    flex: 1 1 calc(50% - 20px); /* Адаптивна ширина: 50% мінус відступ */
+    max-width: 300px; /* Максимальна ширина для великих екранів */
+    box-sizing: border-box;
+}
+
+/* Іконка фільтру */
+.filter-item img {
+    width: 20px; /* Зменшені розміри для мобільних пристроїв */
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Кнопка фільтру */
+.filter-button {
+    width: 32px;
+    height: 32px;
+    background-color: #1a1a1a;
+    border-radius: 50%; /* Повна форма кола */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2 container*/
+
+.header_properties_2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: #999999;
+}
+
+/* Сітка карток */
+.property-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Дозволяє переносити картки */
+    justify-content: center;
+    margin: 0 auto; /* Центруємо сітку */
+    padding: 20px;
+}
+
+.property-card {
+    background-color: #141414;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 432px; /* Обмежуємо максимальну ширину */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.property-card img {
+    width: 100%;
+    height: auto; /* Робимо висоту адаптивною */
+}
+
+.property-info {
+    padding: 20px; /* Зменшуємо відступи для мобільних */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.property-tag {
+    background-color: #1a1a1a;
+    border-radius: 28px;
+    padding: 8px 14px;
+    font-size: 16px; /* Менший шрифт для мобільних */
+    font-weight: 500;
+}
+
+.property-title {
+    font-size: 20px; /* Зменшений розмір */
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.property-description {
+    font-size: 16px; /* Менший розмір */
+    line-height: 24px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.property-price {
+    font-size: 16px; /* Менший розмір */
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.price-number {
+    font-size: 20px; /* Менший розмір */
+    font-weight: 600;
+    color: white;
+}
+
+.view-details-button {
+    background-color: #703bf7;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px; /* Менший розмір кнопки */
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+
+.navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px;
+    color: #999999;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
+    width: 100%; /* Ширина блоку не перевищує екран */
+    box-sizing: border-box; /* Включає padding у ширину */
+    max-width: 1400px; /* Для обмеження ширини на великих екранах */
+    margin: 0 auto; /* Центрує блок */
+    overflow-x: hidden; /* Запобігає горизонтальному прокручуванню */
+}
+
+.page-info {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    white-space: nowrap; /* Уникає переносу тексту */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 58px;
+    height: 58px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #262626;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.nav-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 3 container*/
+
+/* 3 container*/
+
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Проміжок між елементами */
+    max-width: 100%;
+    margin: 80px auto; /* Центрування та обмеження марджіну */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    flex: 1 1 calc(25% - 20px); /* Поля займають одну колонку, якщо є місце */
+    min-width: 200px; /* Мінімальна ширина полів */
+}
+
+.form-group:nth-child(9) {
+    flex: 2 1 calc(50% - 20px); /* Budget займає дві колонки */
+}
+
+.message {
+    flex: 4 1 calc(100% - 20px); /* Поле message займає всю ширину */
+}
+
+.form-group label {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #ffffff;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    padding: 22px 20px;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    width: 100%; /* Забезпечує адаптацію */
+    box-sizing: border-box;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #666666;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.checkbox-and-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-radius: 8px;
+    background-color: #282828;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkbox-with-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.send-message-button {
+    background-color: #703bf7;
+    color: #ffffff;
+    border: none;
+    padding: 18px 46px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.send-message-button:hover {
+    background-color: #5439C5;
+}
+
+
+
+
+/* Properties End*/
+
+/*****************/
+
+/* Services Start */
+
+.container_Services_4 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1597px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.text-container_Services_4 {
+    margin-bottom: 40px;
+    padding-right: 300px;
+}
+.heading_Services_4 {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+.paragraph_Services_4 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+.steps-container-Services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch; /* Вирівнювання висоти всіх елементів */
+}
+
+.step-card-Services {
+    width: calc(33.333% - 20px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #141414;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Робимо так, щоб вміст блоку розміщувався вертикально */
+}
+
+.step-card-Services:nth-child(5) {
+    width: calc(66.666% - 20px); /* Займає 2 колонки */
+}
+
+.step-header-Services {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+
+}
+
+.step-body-Services {
+    flex-grow: 1; /* Вирівнюємо висоту всіх step-body, щоб заповнити весь простір */
+    position: relative;
+    padding: 50px;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    background-color: #141414;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.step-body-Services-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 50px;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    background-color: #1A1A1A;
+    background-image: url('../img/Abstract\ Design.svg');
+    background-size: cover; /* Зображення покриває весь блок */
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+.step-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Відступ між першим рядком і текстом нижче */
+}
+
+
+
+.step-body-content-Services {
+    position: relative;
+    z-index: 3; /* Контент блоку має бути поверх градієнта */
+}
+.step-title-Services {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Проміжок між іконкою і текстом */
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.step-description-Services {
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+}
+
+.learn-more-button {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #262626;
+    margin-bottom: 20px;
+    padding: 18px 46px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.learn-more-button:hover {
+    background-color: #5439C5;
+}
+
+
+/*2 container*/
+.container_Services_2 {
+    display: flex;
+    width: 100%;
+    max-width: 1596px;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+.text-container_Services_2 {
+    flex: 1;
+    margin-right: 80px;
+}
+.heading_Services_2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.5;
+}
+.paragraph_Services_2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+    margin-top: 14px;
+    margin-bottom: 40px;
+}
+.values-container-Services {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #26262669;
+    border: 1px solid #262626; /* Основний бордер */
+    border-radius: 12px;
+    position: relative;
+    z-index: 1; /* Щоб контент був над псевдоелементом */
+}
+
+
+
+.values-group-Services {
+    display: flex;
+    gap: 10px;
+    position: relative; /* Для позиціонування псевдоелементу */
+}
+
+.value-card-Services {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    border: 1px solid #363636; /* Основний бордер */
+    border-radius: 8px;
+    gap: 20px;
+    padding: 60px;
+}
+.value-heading-Services {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.icon-container_Services_2 {
+    width: 74px;
+    height: 74px;
+    background-color: #141414;
+    border: 1px solid #703bf7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container_Services_2 img {
+    width: 34px;
+    height: 34px;
+}
+.value-title-Services {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+}
+.value-paragraph-Services {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #999;
+}
+
+.learn-more-button-2 {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #262626;
+    margin-top: 20px;
+    padding: 18px 46px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.learn-more-button-2:hover {
+    background-color: #5439C5;
+}
+
+/* Services End */
+
+
+
+/*Footer*/
+
+.footer {
+    padding: 100px 162px;
+    background-color: #1a1a1a;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #262626;
+    padding-top: 100px;
+    gap: 80px;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-column .logo {
+    width: 160px;
+    height: 48px;
+    background-image: url('../img/Logo_Footer.svg');
+}
+.input-field {
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 18px 24px;
+    gap: 10px;
+    width: 423px;
+}
+.input-field img {
+    width: 24px;
+    height: 24px;
+}
+.input-field .email-field {
+    flex: 1;
+    font-size: 18px;
+    color: #999;
+}
+.footer-link-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #999;
+}
+.footer-link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    background-color: #1a1a1a;
+    padding-bottom: 16px;
+    padding-left: 162px;
+    padding-right: 162px;
+    border-top: 1px solid #262626;
+    align-items: center;
+}
+.footer-bottom .link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icon {
+    width: 52px;
+    height: 52px;
+    background-color: #141414;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.swiper-container {
+    display: none;
+}
+
+
+/*
+const swiper = new Swiper('.swiper-container', {
+    loop: true, // Циклічний свайп
+    slidesPerView: 1, // Одна картка на екрані
+    centeredSlides: true, // Центрування активного слайда
+    autoplay: {
+      delay: 3000, // Автозапуск через 3 секунди
+      disableOnInteraction: false, // Продовження після взаємодії
+    },
+    speed: 500, // Швидкість анімації свайпа
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    initialSlide: 0, // Починаємо зі слайда 0
+});
+
+*/
+
+/* Кастомні стилі для SweetAlert2 */
+.swal2-popup {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.swal2-title {
+    color: #fff !important;
+    font-size: 24px;
+}
+
+.swal2-content {
+    font-size: 16px;
+    color: #bbb !important;
+}
+
+.swal2-confirm {
+    background-color: #703bf7 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px;
+}
+
+
+/*404*/
+
+.error-page {
+    display: flex; /* Включаємо флекс-контейнер */
+    flex-direction: column; /* Розташовуємо елементи в колонку */
+    align-items: center; /* Вирівнюємо елементи по горизонталі */
+    justify-content: center; /* Вирівнюємо елементи по вертикалі */
+    height: 100vh; /* Висота контейнера дорівнює висоті вікна */
+    text-align: center; /* Вирівнюємо текст по центру */
+    padding: 20px; /* Додаємо відступи для мобільних пристроїв */
+    box-sizing: border-box; /* Ураховуємо padding у ширину і висоту */
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: 700;
+    color: #703bf7;
+    margin: 0;
+}
+
+.error-message {
+    font-size: 18px;
+    color: #999999;
+    margin: 10px 0 30px 0;
+}
+
+.home-button {
+    background-color: #703bf7;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #5439c5;
+}
+
+.error-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+}
+
+/**/
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column-reverse; /* Відображає блоки у потрібному порядку */
+    align-items: center; /* Центрує контент */
+    justify-content: center; /* Вертикальне вирівнювання */
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+}
+
+.text-container {
+    width: 100%;
+    padding: 20px;
+    text-align: center; /* Центрує текст */
+    box-sizing: border-box;
+}
+
+.image-container {
+    width: 100%;
+    min-height: 300px; /* Забезпечує мінімальну висоту */
+    background-image: url('../img/Image.svg'); /* Додаємо шлях до зображення */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto; /* Центруємо контейнер */
+}
+
+.stats {
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1 1 100%; /* Забезпечує адаптивність */
+    max-width: 100%; /* Запобігає виходу за межі екрану */
+    box-sizing: border-box;
+    margin-bottom: 16px; /* Відступи між картками */
+}
+
+
+.heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.button.learn-more {
+    border: 1px solid #fff;
+}
+
+.button.browse-properties {
+    background-color: #703bf7;
+    color: #fff;
+}
+
+.stat-card:nth-child(3) {
+    grid-column: span 2; /* Третій блок займає всю ширину */
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.icons-container-before {
+    padding: 0; /* Прибираємо зайві відступи */
+    margin: 0 auto; /* Центруємо контейнер */
+    width: 100%; /* Контейнер займає всю ширину екрану */
+    box-sizing: border-box;
+}
+
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Дві колонки */
+    gap: 10px; /* Відстань між картками */
+    width: 100%; /* Гарантуємо, що блок не виходить за межі екрану */
+    padding: 0 10px; /* Невеликий відступ з боків */
+    margin: 0; /* Прибираємо зайві зовнішні відступи */
+    box-sizing: border-box;
+}
+
+.icon-card {
+    width: 100%; /* Картка займає всю ширину колонки */
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    box-sizing: border-box;
+}
+
+.icon-card img {
+    width: 50px; /* Розмір іконки */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.icon-card-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+}
+
+.icon-card::after {
+
+    position: absolute;
+    top: 10%;
+    right: 10%; /* Центруємо стрілку ближче до краю */
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+    .container6 .header6 .button6 {
+        display: none; /* Приховуємо кнопку */
+    }
+
+    .container6 .header6 .text-container6 {
+        text-align: center; /* Центруємо текст */
+        margin: 0 auto; /* Забезпечуємо вирівнювання по центру */
+    }
+
+    .container6 .header6 .heading6 {
+        font-size: 28px;
+
+        margin-bottom: 10px; /* Додаємо відступ для естетики */
+    }
+
+    .container6 .header6 .paragraph6 {
+        margin: 0 auto; /* Центруємо параграф */
+        max-width: 80%; /* Обмежуємо ширину тексту для читабельності */
+    }
+
+
+    .tag-container6 {
+        display: flex;
+        flex-wrap: wrap; /* Дозволяє тегам переноситися на новий рядок */
+        gap: 10px; /* Додає простір між тегами */
+        justify-content: flex-start; /* Вирівнює теги на початок */
+    }
+
+    .tag6 {
+        flex: 1 1 calc(33.33% - 10px); /* Робить теги адаптивними, щоб вони займали третину рядка */
+        min-width: 100px; /* Мінімальна ширина для тегів */
+        white-space: nowrap; /* Забезпечує цілісність тексту всередині тегу */
+        overflow: hidden; /* Відсікає довгий текст */
+        text-overflow: ellipsis; /* Додає три крапки для довгого тексту */
+    }
+
+    /* Карти */
+    .cards, .cards3, .cards6 {
+        flex-wrap: wrap; /* Картки стають на нові рядки */
+        gap: 12px;
+        justify-content: center;
+    }
+    .card, .card3, .card6 {
+        flex: 1 1 calc(100% - 32px); /* Заповнення всієї ширини */
+        max-width: 100%;
+    }
+
+    /* Заголовки карток */
+    .card-heading, .card-heading3, .card-heading6 {
+        font-size: 18px; /* Зменшення розміру */
+        text-align: center;
+    }
+
+    /* Відгуки */
+    .container2, .container3 {
+        padding: 0 16px;
+    }
+
+    /* Текст у відгуках */
+    .heading2, .heading3 {
+        font-size: 24px;
+    }
+    .paragraph2, .paragraph3 {
+        font-size: 14px;
+    }
+
+    /* Пагінація */
+    .pagination, .pagination3, .pagination6 {
+        padding-top: 12px;
+    }
+    .pagination-text, .pagination-text3, .pagination-text6 {
+        font-size: 14px;
+    }
+    .pagination-button, .pagination-button3, .pagination-button6 {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cta-container {
+        padding: 20px; /* Зменшити відступи */
+        display: flex;
+        flex-direction: column; /* Вирівнюємо контент у колонку */
+        align-items: center; /* Центруємо контент */
+        text-align: center; /* Текст у центрі */
+    }
+
+    .cta-container .text-content4 {
+        max-width: 90%; /* Обмежуємо ширину тексту */
+    }
+
+    .cta-container .heading4 {
+        font-size: 24px; /* Зменшення розміру заголовка */
+        line-height: 1.4; /* Висота рядка */
+        margin-bottom: 10px; /* Відступи для візуальної ієрархії */
+    }
+
+    .cta-container .paragraph4 {
+        font-size: 16px; /* Зменшення розміру тексту */
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .cta-container .cta-button {
+        font-size: 18px; /* Розмір тексту кнопки */
+        padding: 12px 24px; /* Компактні відступи */
+    }
+
+    /** Footer **/
+    .footer {
+        padding: 16px;
+        overflow: hidden; /* Запобігаємо виходу елементів за межі */
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%; /* Колонки займають всю ширину */
+        text-align: center; /* Центруємо текст на мобільних */
+    }
+
+    .input-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        max-width: 100%; /* Поле вводу не виходить за межі екрану */
+    }
+
+    .footer-link-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .social-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .footer-bottom .link {
+        font-size: 14px;
+        margin: 5px 0;
+        white-space: nowrap; /* Запобігаємо переносу тексту */
+    }
+}
+    /**Bitburger Menus Manuels**/
+
+    /* Сховати бургер-меню на десктопі */
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+    }
+    .burger-menu span {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        display: block;
+    }
+    
+    .mobile-menu {
+        transition: all 0.3s ease; /* Плавний перехід */
+        opacity: 0; /* Початково приховане */
+        transform: translateY(-20px); /* Зсув для ефекту */
+        pointer-events: none; /* Забороняємо кліки */
+    }
+    .mobile-menu .menu-item {
+        font-size: 18px;
+        padding: 10px 0;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .mobile-menu.open {
+        opacity: 1; /* Відображаємо меню */
+        transform: translateY(0); /* Повертаємо на місце */
+        pointer-events: auto; /* Дозволяємо кліки */
+    }
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .menu {
+        display: none !important; /* Ховаємо основне меню */
+    }
+    .contacts-button {
+        display: none !important; /* Ховаємо кнопку Contact Us */
+    }
+    .burger-menu {
+        display: flex; /* Показуємо бургер-меню */
+    }
+    .mobile-menu {
+        display: none; /* Приховуємо мобільне меню за замовчуванням */
+    }
+    .mobile-menu.open {
+        display: flex; /* Показуємо мобільне меню при натисканні */
+    }
+}
+
+/* Приховуємо стандартне меню */
+@media (max-width: 768px) {
+    .menu,
+    .contacts-button {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* Регулюйте відповідно до висоти заголовка */
+        left: 0;
+        right: 0;
+        background-color: #1a1a1a;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .burger-menu span {
+        background: white;
+        height: 3px;
+        width: 25px;
+        border-radius: 2px;
+    }
+}
+
+/**Mobile About**/
+@media (max-width: 768px) {
+    /* 1 container */
+    .container_About_1 {
+        flex-direction: column; /* Робимо вертикальну компоновку */
+        gap: 20px; /* Додаємо відступи між елементами */
+        align-items: center; /* Вирівнюємо по центру */
+    }
+
+    .image-section_About_1 {
+        order: 1; /* Розташовуємо зображення першим */
+        width: 100%; /* Робимо зображення на всю ширину */
+    }
+
+    .image-section_About_1 img {
+        width: 90%; /* Налаштовуємо ширину зображення для зручності */
+        max-width: 400px; /* Обмежуємо максимальний розмір */
+    }
+
+    .text-section_About_1 {
+        order: 2; /* Розташовуємо текст другим */
+        text-align: center; /* Центруємо текст */
+        padding: 0 20px; /* Додаємо відступи з боків */
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці для перших двох блоків */
+        grid-template-rows: auto auto; /* Два рядки */
+        gap: 16px; /* Відступи між блоками */
+    }
+
+    .stat-box {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 12px 10px; /* Зменшуємо внутрішні відступи */
+        font-size: 14px; /* Зменшуємо розмір тексту */
+    }
+
+    .stat-number {
+        font-size: 20px; /* Зменшуємо розмір основного числа */
+        font-weight: 700; /* Робимо число трохи жирнішим */
+    }
+
+    .stat-description {
+        font-size: 12px; /* Зменшуємо опис */
+        color: #999; /* Трохи приглушений колір */
+        line-height: 1.3; /* Зменшуємо висоту рядка */
+    }
+
+    .stat-box:nth-child(3) {
+        grid-column: span 2; /* Третій блок займає два стовпці */
+    }
+
+    /* 2 container */
+    .container_About_2 {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+    .text-container_About_2 {
+        margin-right: 0;
+    }
+    .heading_About_2 {
+        font-size: 28px;
+    }
+    .paragraph_About_2 {
+        font-size: 16px;
+    }
+    .values-container {
+        padding: 20px;
+    }
+    .value-heading {
+        gap: 10px;
+    }
+    .icon-container_About_2 {
+        width: 50px;
+        height: 50px;
+    }
+    .value-title {
+        font-size: 20px;
+    }
+    .value-paragraph {
+        font-size: 14px;
+    }
+
+    /* 3 container */
+    .container_About_3 {
+        width: 100%; /* Забезпечує, що блок займає всю ширину екрану */
+        max-width: 100%; /* Максимальна ширина встановлюється у 100% */
+        padding: 10px; /* Зменшуємо внутрішні відступи */
+        box-sizing: border-box; /* Додаємо підтримку padding у ширині */
+    }
+
+    .text-container_About_3 {
+        text-align: center; /* Вирівнюємо текст по центру */
+        padding: 0;
+    }
+
+    .heading_About_3 {
+        font-size: 26px; /* Зменшуємо розмір заголовка */
+        line-height: 1.4;
+        margin-bottom: 10px; /* Зменшуємо відступ знизу */
+    }
+
+    .paragraph_About_3 {
+        font-size: 14px; /* Зменшуємо розмір тексту */
+        line-height: 1.4;
+        margin-bottom: 20px; /* Відступ між текстом та картками */
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column; /* Вертикальне розташування карток */
+        gap: 10px; /* Відстань між картками */
+        width: 100%; /* Забезпечує ширину у 100% */
+    }
+
+    .card {
+        width: 100%; /* Забезпечує, що картка займає всю ширину */
+        max-width: 100%; /* Обмеження ширини */
+        padding: 15px; /* Внутрішній відступ */
+        box-sizing: border-box; /* Включає padding у ширину */
+    }
+
+    .card-heading {
+        font-size: 20px; /* Зменшуємо розмір заголовка картки */
+        margin-bottom: 10px;
+    }
+
+    .card-paragraph {
+        font-size: 14px; /* Зменшуємо розмір тексту в картці */
+        line-height: 1.4;
+    }
+    /* 4 container */
+    .container_About_4 {
+        padding: 20px 10px;
+    }
+    .text-container_About_4 {
+        padding-right: 0;
+    }
+    .steps-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .heading_About_4 {
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+    .step-card {
+        width: 100%;
+    }
+
+    /* 5 container */
+    
+    .container_About_5 {
+        padding: 20px 10px;
+        gap: 40px;
+    }
+    .text-container_About_5 {
+        padding-right: 0;
+    }
+    .team-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card_About_5 {
+        max-width: 100%;
+    }
+
+    /* 6 container */
+    .text-container_About_6 {
+        padding: 0 16px; /* Встановлюємо бокові відступи */
+        max-width: 100%; /* Гарантуємо, що елемент не виходить за межі екрана */
+        box-sizing: border-box; /* Враховуємо padding у ширині елемента */
+        text-align: center; /* Залишаємо текст вирівняним по центру */
+    }
+
+    .heading_About_6 {
+        font-size: 24px; /* Зменшуємо розмір шрифту заголовка */
+        line-height: 1.4; /* Покращуємо читабельність */
+    }
+
+    .paragraph_About_6 {
+        font-size: 16px; /* Зменшуємо розмір шрифту тексту */
+        line-height: 1.5; /* Покращуємо міжрядковий інтервал */
+    }
+    .container_About_6 {
+        padding: 20px 10px;
+        gap: 40px;
+    }
+    .cards-container_About_6 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card_About_6 {
+        padding: 20px;
+    }
+    .card-header-left {
+        gap: 4px;
+    }
+    .company-name {
+        font-size: 24px;
+    }
+    .visit-website {
+        padding: 14px 20px;
+    }
+    .values-container {
+        padding: 20px;
+    }
+
+    .values-group {
+        flex-direction: column; /* Розташування блоків у колонку */
+        gap: 0; /* Видаляємо проміжки між блоками */
+    }
+
+    .value-card {
+        padding: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Додаємо горизонтальну лінію */
+    }
+
+    .value-card:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Лінія після Excellence */
+    }
+
+    .value-card:last-child {
+        border-bottom: none; /* Видаляємо лінію для останнього блоку */
+    }
+
+    .values-group::after {
+        display: none; /* Прибираємо вертикальну лінію між блоками */
+    }
+
+    .value-heading {
+        font-size: 28px;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon-container_About_2 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-container_About_2 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .value-title {
+        font-size: 18px;
+    }
+
+    .value-paragraph {
+        font-size: 14px;
+    }
+
+    hr {
+        display: none; /* Прибираємо горизонтальні лінії, які є в основному коді */
+    }
+
+    /* Propetries*/
+
+    .container_properties_1 {
+        padding: 0 16px; /* Менші відступи */
+    }
+
+    .search-bar {
+        flex-direction: column; /* Відображення елементів у колонку */
+        gap: 10px; /* Відступи між елементами */
+    }
+
+    .search-bar input {
+        flex-grow: unset; /* Забираємо розтягування */
+        width: 100%; /* Займає всю ширину */
+    }
+
+    .search-bar button {
+        width: 100%; /* Кнопка займає всю ширину */
+    }
+
+    .filter-options {
+        flex-direction: column; /* Елементи розташовуються в колонку */
+        gap: 12px; /* Більший відступ між елементами */
+        padding: 10px; /* Менший відступ */
+    }
+
+    .filter-item {
+        flex: 1 1 100%; /* Елементи займають всю ширину */
+        max-width: none; /* Прибираємо максимальну ширину */
+        padding: 10px; /* Зменшені відступи */
+    }
+
+    .filter-item img {
+        width: 16px; /* Ще менші розміри іконок */
+        height: 16px;
+    }
+
+    .filter-button {
+        width: 28px; /* Зменшена ширина кнопки */
+        height: 28px;
+    }
+
+    .property-grid {
+        display: flex;
+        flex-wrap: nowrap; /* Вимикаємо перенесення карток */
+        overflow-x: auto; /* Додаємо горизонтальний скрол */
+        scroll-snap-type: x mandatory; /* Свайп по одній картці */
+    }
+
+    .property-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #141414;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        padding: 20px; /* Додаємо відступи для простору */
+        min-height: 100%; /* Мінімальна висота картки */
+        box-sizing: border-box; /* Включає padding у висоту */
+    }
+    
+    .property-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Вирівнювання простору між текстом і кнопкою */
+        flex-grow: 1; /* Дає простору картці розтягуватися */
+        padding: 20px;
+    }
+    
+    /* Оновлена кнопка */
+    .view-details-button {
+        background-color: #703bf7;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 20px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-top: 20px; /* Відступ від ціни */
+        align-self: center; /* Центруємо кнопку */
+        width: calc(100% - 40px); /* Вирівнюємо ширину під контейнер */
+        max-width: 180px; /* Задаємо максимальну ширину */
+        box-sizing: border-box;
+    }
+    
+    .view-details-button:hover {
+        background-color: #5439C5;
+    }
+
+    .navigation-controls{
+        display: none;
+    }
+
+    .swiper-container {
+        display: block;
+        position: relative; /* Задаємо відносне позиціонування для контейнера */
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+        position: absolute; /* Абсолютне позиціонування стрілок */
+        top: 50%; /* Центруємо по вертикалі */
+        transform: translateY(-50%); /* Вирівнюємо центр */
+        z-index: 10; /* Щоб стрілочки були над усіма елементами */
+        color: #ffffff !important; /* Колір стрілок */
+        opacity: 0.8; /* Прозорість для більш м'якого вигляду */
+
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #ccc !important; /* Світло-сірий при наведенні */
+    }
+
+    .swiper-button-next {
+        right: 10px; /* Відступ від правого краю контейнера */
+    }
+    
+    .swiper-button-prev {
+        left: 10px; /* Відступ від лівого краю контейнера */
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #fff !important; /* Білий колір крапочок */
+        opacity: 0.6; /* Прозорість для меншого акценту */
+    }
+    
+    .swiper-pagination-bullet-active {
+        background-color: #ccc !important; /* Світло-сірий для активної крапки */
+        opacity: 1; /* Повна непрозорість для активної крапки */
+    }
+    
+
+    .checkbox-and-button-container {
+        flex-direction: column; /* Елементи в один стовпець */
+        align-items: stretch; /* Розтягуємо по ширині */
+        padding: 12px; /* Ще менші відступи */
+        gap: 12px;
+    }
+
+    .checkbox-with-label {
+        text-align: left; /* Вирівнюємо текст ліворуч */
+    }
+
+    .checkbox-label {
+        font-size: 16px; /* Зменшення шрифту */
+    }
+
+    .send-message-button {
+        padding: 12px 20px; /* Менший розмір кнопки */
+        font-size: 16px; /* Зменшення шрифту */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        display: flex;
+        flex-direction: column; /* Перехід до вертикального розташування */
+        gap: 20px; /* Відступи між групами полів */
+        padding: 20px; /* Відступи від країв екрана */
+        border: 1px solid #262626; /* Рамка контейнера */
+        border-radius: 12px; /* Закруглення рамки */
+        background-color: #141414; /* Темний фон */
+        margin: 20px auto; /* Центрування контейнера */
+        box-sizing: border-box;
+        width: calc(100% - 40px); /* Поля не виходять за межі екрана */
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column; /* Всі поля у вертикальному розташуванні */
+        width: 100%; /* Поля займають всю ширину контейнера */
+    }
+
+    .input-field {
+        width: 100%; /* Поля не ширші за батьківський контейнер */
+        margin: 0; /* Прибираємо зайві відступи */
+    }
+
+    .input-field input,
+    .input-field select,
+    .input-field textarea {
+        width: 100%; /* Поля займають всю ширину */
+        background-color: #1a1a1a; /* Темний фон */
+        border: 1px solid #262626; /* Рамка для полів */
+        padding: 10px; /* Внутрішні відступи */
+        color: #666666; /* Колір тексту */
+        font-size: 16px; /* Розмір тексту */
+        font-weight: 500;
+        border-radius: 8px;
+        box-sizing: border-box; /* Включає padding у ширину */
+    }
+
+    .send-message-button {
+        width: 100%; /* Кнопка займає всю ширину */
+        margin: 20px 0 0 0; /* Відступ зверху */
+        background-color: #703bf7; /* Колір кнопки */
+        color: white; /* Білий текст */
+        padding: 14px;
+        font-size: 18px; /* Розмір тексту */
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container_Services_4 {
+        padding: 20px 0;
+    }
+
+    .text-container_Services_4 {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .heading_Services_4 {
+        font-size: 28px; /* Зменшуємо розмір заголовка */
+        text-align: center; /* Центруємо текст */
+    }
+
+    .paragraph_Services_4 {
+        font-size: 16px; /* Зменшуємо розмір шрифту */
+        text-align: center; /* Центруємо текст */
+    }
+
+    .steps-container-Services {
+        gap: 20px; /* Зменшуємо проміжок між блоками */
+    }
+
+    .step-card-Services {
+        width: 100%; /* Кожен блок займає всю ширину */
+    }
+
+    .step-card-Services:nth-child(5) {
+        width: 100%; /* П'ятий блок також займає всю ширину */
+    }
+
+    .step-body-Services,
+    .step-body-Services-2 {
+        padding: 20px; /* Зменшуємо внутрішні відступи */
+    }
+
+    .step-header-container {
+        flex-direction: column; /* Розташування тексту та кнопки вертикально */
+        align-items: center;
+        gap: 10px; /* Відступ між текстом і кнопкою */
+    }
+
+    .step-title-Services {
+        font-size: 20px; /* Зменшуємо розмір заголовка */
+    }
+
+    .step-description-Services {
+        font-size: 16px; /* Зменшуємо розмір опису */
+    }
+
+    .learn-more-button {
+        font-size: 16px; /* Зменшуємо розмір кнопки */
+        padding: 12px 24px; /* Менші відступи */
+    }
+}
+
+@media (max-width: 768px) {
+    .container_Services_2 {
+        flex-direction: column; /* Робимо вертикальне розташування */
+        align-items: center;
+        padding: 20px 0; /* Зменшуємо зовнішні відступи */
+    }
+
+    .text-container_Services_2 {
+        margin-right: 0;
+        margin-bottom: 20px; /* Додаємо відступ між текстом і значеннями */
+        text-align: center; /* Центруємо текст */
+    }
+
+    .heading_Services_2 {
+        font-size: 28px; /* Зменшуємо розмір заголовка */
+        line-height: 1.4;
+    }
+
+    .paragraph_Services_2 {
+        font-size: 16px; /* Зменшуємо розмір опису */
+        line-height: 1.4;
+        margin-bottom: 20px; /* Зменшуємо відступ */
+    }
+
+    .values-container-Services {
+        padding: 20px; /* Зменшуємо внутрішні відступи */
+        gap: 20px; /* Відстань між групами значень */
+    }
+
+    .values-group-Services {
+        flex-direction: column; /* Робимо вертикальне розташування */
+        gap: 20px; /* Відстань між картками */
+    }
+
+    .value-card-Services {
+        padding: 20px; /* Зменшуємо внутрішні відступи */
+        gap: 10px; /* Зменшуємо відстань між елементами всередині картки */
+    }
+
+    .value-heading-Services {
+        gap: 10px; /* Зменшуємо відстань між іконкою і текстом */
+    }
+
+    .icon-container_Services_2 {
+        width: 60px;
+        height: 60px; /* Зменшуємо розмір іконки */
+    }
+
+    .icon-container_Services_2 img {
+        width: 28px;
+        height: 28px; /* Зменшуємо розмір зображення */
+    }
+
+    .value-title-Services {
+        font-size: 20px; /* Зменшуємо розмір заголовка */
+        line-height: 1.4;
+    }
+
+    .value-paragraph-Services {
+        font-size: 14px; /* Зменшуємо розмір тексту */
+        line-height: 1.4;
+    }
+
+    .learn-more-button-2 {
+        font-size: 16px; /* Зменшуємо розмір кнопки */
+        padding: 12px 24px; /* Зменшуємо внутрішні відступи*/
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: row; /* Розташовуємо елементи вертикально */
+        padding: 20px; /* Зменшуємо внутрішні відступи */
+    
+    }
+
+    .banner .text {
+        font-size: 12px; /* Зменшуємо розмір тексту */
+        line-height: 24px;
+    }
+
+    .text-button {
+        display: none;
+    }
+
+    .banner .close-button {
+        
+        width: 24px; /* Зменшуємо розмір кнопки */
+        height: 24px;
+    }
+
+    .header_properties_2 {
+        display: none;
+    }
+    .property-grid {
+        display: none;
+    }
+}

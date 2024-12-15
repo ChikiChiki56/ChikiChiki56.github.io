@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatein - Discover Your Dream Property</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<header class="banner">
+    <div class="abstract-design"></div>
+    <div class="text">✨Discover Your Dream Property with Estatein</div>
+    <div class="text-button">Learn More</div>
+    <div class="close-button">
+        <img src="img/cross.svg" alt="icon">
+    </div>
+</header>
+<nav class="navbar">
+    <div class="logo">
+        <img src="img/Symbol.png" alt="logo symbol">
+        <div class="logo-text">Estatein</div>
+    </div>
+    <div class="menu">
+        <a href="index.html" class="menu-item">Home</a>
+        <a href="about.html" class="menu-item">About Us</a>
+        <a href="properties.html" class="menu-item">Properties</a>
+        <a href="services.html" class="menu-item">Services</a>
+    </div>
+    <div class="contacts-button">
+        <div class="text">Contact Us</div>
+    </div>
+    <!-- Бургер-меню -->
+    <div class="burger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="menu-item">Home</a>
+    <a href="about.html" class="menu-item">About Us</a>
+    <a href="properties.html" class="menu-item">Properties</a>
+    <a href="services.html" class="menu-item">Services</a>
+    <div class="contacts-button">
+        <div class="text">Contact Us</div>
+    </div>
+</div>
+</head>
+<body>
+    <!-- 1ша секція -->
+    <div class="container">
+        <div class="text-container">
+            <div class="heading">Discover Your Dream Property with Estatein</div>
+            <div class="paragraph">Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</div>
+            <div class="buttons-container">
+                <div class="button learn-more">Learn More</div>
+                <a href="404.html" class="button browse-properties">Browse Properties</a>
+
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Properties For Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">16+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+            </div>
+        </div>
+        <div class="image-container"></div>
+    </div>
+    <div class="icons-container">
+        <div class="icon-card">
+            <div class="icon-circle">
+                <img src="img/IconHome.svg" alt="icon">
+            </div>
+            <div class="icon-card-text">Find Your Dream Home</div>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">
+                <img src="img/IconValue.png" alt="icon">
+            </div>
+            <div class="icon-card-text">Unlock Property Value</div>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">
+                <img src="img/IconManagement.svg" alt="icon">
+            </div>
+            <div class="icon-card-text">Effortless Property Management</div>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">
+                <img src="img/IconDecisions.svg" alt="icon">
+            </div>
+            <div class="icon-card-text">Smart Investments, Informed Decisions</div>
+        </div>
+    </div>
+    <!-- 6та секція -->
+
+    <div class="container6">
+        <div class="header6">
+            <div class="text-container6">
+                <div class="abstract-design">
+                    <img src="img/Shine.png" alt="Abstract Design" class="frame" width="68.4" height="30">
+                </div>
+                <div class="heading6">Featured Properties</div>
+                <div class="paragraph6">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click "View Details" for more information.</div>
+            </div>
+            <button class="button6">View All Properties</button>
+        </div>
+        <div class="cards6">
+            <div class="card6">
+                <img src="img/Villa.svg" alt="property image">
+                <div class="card-heading6">Seaside Serenity Villa</div>
+                <div class="card-paragraph6">A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More</div>
+                <div class="tag-container6">
+                    <div class="tag6"><img src="img/bedroom.svg" alt="icon">4-Bedroom</div>
+                    <div class="tag6"><img src="img/bathroom.svg" alt="icon">3-Bathroom</div>
+                    <div class="tag6"><img src="img/IconVilla.svg" alt="icon">Villa</div>
+                </div>
+                <div class="price-button-container6">
+                    <div class="price6">$550,000</div>
+                    <button class="view-details6">View Property Details</button>
+                </div>
+            </div>
+            <div class="card6">
+                <img src="img/Haven.svg" alt="property image">
+                <div class="card-heading6">Metropolitan Haven</div>
+                <div class="card-paragraph6">A chic and fully-furnished 2-bedroom apartment with panoramic city views... Read More</div>
+                <div class="tag-container6">
+                    <div class="tag6"><img src="img/bedroom.svg" alt="icon6">2-Bedroom</div>
+                    <div class="tag6"><img src="img/bathroom.svg" alt="icon6">2-Bathroom</div>
+                    <div class="tag6"><img src="img/IconVilla.svg" alt="icon6">Apartment</div>
+                </div>
+                <div class="price-button-container6">
+                    <div class="price6">$550,000</div>
+                    <button class="view-details6">View Property Details</button>
+                </div>
+            </div>
+            <div class="card6">
+                <img src="img/Cottage.svg" alt="property image">
+                <div class="card-heading6">Rustic Retreat Cottage</div>
+                <div class="card-paragraph6">An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More</div>
+                <div class="tag-container6">
+                    <div class="tag6"><img src="img/bedroom.svg" alt="icon6">3-Bedroom</div>
+                    <div class="tag6"><img src="img/bathroom.svg" alt="icon6">2.5-Bathroom</div>
+                    <div class="tag6"><img src="img/IconVilla.svg" alt="icon6">Cottage</div>
+                </div>
+                <div class="price-button-container6">
+                    <div class="price6">$550,000</div>
+                    <button class="view-details6">View Property Details</button>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="pagination-text">01 of 60</div>
+            <div class="pagination-buttons">
+                <div class="pagination-button">
+                    <img src="img/Button_Left.svg" alt="previous">
+                </div>
+                <div class="pagination-button">
+                    <img src="img/Button_Right.svg" alt="next">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2га секція -->
+    <div class="container2">
+        <div class="header">
+            <div class="text-container">
+                <div class="abstract-design">
+                    <img src="img/Shine.png" alt="Abstract Design" class="frame" width="68.4" height="30">
+                </div>
+                <div class="heading2">What Our Clients Say</div>
+                <div class="paragraph2">Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.</div>
+            </div>
+            <button class="button">View All Testimonials</button>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="stars">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                </div>
+                <div>
+                    <div class="card-heading">Exceptional Service!</div>
+                    <div class="card-paragraph">Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!</div>
+                </div>
+                <div class="profile">
+                    <img src="img/John.svg" alt="profile">
+                    <div>
+                        <div class="profile-name">Wade Warren</div>
+                        <div class="profile-location">USA, California</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                </div>
+                <div>
+                    <div class="card-heading">Efficient and Reliable</div>
+                    <div class="card-paragraph">Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results.</div>
+                </div>
+                <div class="profile">
+                    <img src="img/Emelie.svg" alt="profile">
+                    <div>
+                        <div class="profile-name">Emelie Thomson</div>
+                        <div class="profile-location">USA, Florida</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="stars">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                    <img src="img/Star.svg" alt="star">
+                </div>
+                <div>
+                    <div class="card-heading">Trusted Advisors</div>
+                    <div class="card-paragraph">The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!</div>
+                </div>
+                <div class="profile">
+                    <img src="img/John.svg" alt="profile">
+                    <div>
+                        <div class="profile-name">John Mans</div>
+                        <div class="profile-location">USA, Nevada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="pagination-text">01 of 10</div>
+            <div class="pagination-buttons">
+                <div class="pagination-button">
+                    <img src="img/Button_Left.svg" alt="previous">
+                </div>
+                <div class="pagination-button" style="background-color: #1a1a1a;">
+                    <img src="img/Button_Right.svg" alt="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3ша секція -->
+    <div class="container3">
+        <div class="header3">
+            <div class="text-container3">
+                <div class="abstract-design">
+                    <img src="img/Shine.png" alt="Abstract Design" class="frame" width="68.4" height="30">
+                </div>
+                <div class="heading3">Frequently Asked Questions</div>
+                <div class="paragraph3">Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.</div>
+            </div>
+            <button class="button3">View All FAQ’s</button>
+        </div>
+        <div class="cards3">
+            <div class="card3">
+                <div class="card-heading3">How do I search for properties on Estatein?</div>
+                <div class="card-paragraph3">Learn how to use our user-friendly search tools to find properties that match your criteria.</div>
+                <button class="read-more3">Read More</button>
+            </div>
+            <div class="card3">
+                <div class="card-heading3">What documents do I need to sell my property through Estatein?</div>
+                <div class="card-paragraph3">Find out about the necessary documentation for listing your property with us.</div>
+                <button class="read-more3">Read More</button>
+            </div>
+            <div class="card3">
+                <div class="card-heading3">How can I contact an Estatein agent?</div>
+                <div class="card-paragraph3">Discover the different ways you can get in touch with our experienced agents.</div>
+                <button class="read-more3">Read More</button>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="pagination-text">01 of 10</div>
+            <div class="pagination-buttons">
+                <div class="pagination-button">
+                    <img src="img/Button_Left.svg" alt="previous">
+                </div>
+                <div class="pagination-button" style="background-color: #1a1a1a;">
+                    <img src="img/Button_Right.svg" alt="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4ша секція -->
+    <div class="cta-container">
+        <div class="abstract-design-left4"></div>
+        <div class="text-content4">
+            <div class="heading4">Start Your Real Estate Journey Today</div>
+            <div class="paragraph4">Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.</div>
+        </div>
+        <button class="cta-button">Explore Properties</button>
+        <div class="abstract-design-right4"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+<footer>
+    <!--Footer-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="logo"></div>
+                <div class="input-field">
+                    <img src="img/mail.svg" alt="icon">
+                    <span class="email-field">Enter Your Email</span>
+                    <img src="img/send.svg" alt="send">
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-link-title">Home</div>
+                <div class="footer-link">Hero Section</div>
+                <div class="footer-link">Features</div>
+                <div class="footer-link">Properties</div>
+                <div class="footer-link">Testimonials</div>
+                <div class="footer-link">FAQ’s</div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-link-title">About Us</div>
+                <div class="footer-link">Our Story</div>
+                <div class="footer-link">Our Works</div>
+                <div class="footer-link">How It Works</div>
+                <div class="footer-link">Our Team</div>
+                <div class="footer-link">Our Clients</div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-link-title">Properties</div>
+                <div class="footer-link">Portfolio</div>
+                <div class="footer-link">Categories</div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-link-title">Services</div>
+                <div class="footer-link">Valuation Mastery</div>
+                <div class="footer-link">Strategic Marketing</div>
+                <div class="footer-link">Negotiation Wizardry</div>
+                <div class="footer-link">Closing Success</div>
+                <div class="footer-link">Property Management</div>
+            </div>
+            <div class="footer-column">
+                <div class="footer-link-title">Contact Us</div>
+                <div class="footer-link">Contact Form</div>
+                <div class="footer-link">Our Offices</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="link">@2023 Estatein. All Rights Reserved.</div>
+            <div class="link">Terms & Conditions</div>
+            <div class="social-icons">
+                <div class="social-icon">
+                    <img src="img/face.svg" alt="social icon 1">
+                </div>
+                <div class="social-icon">
+                    <img src="img/in.svg" alt="social icon 2">
+                </div>
+                <div class="social-icon">
+                    <img src="img/tviw.svg" alt="social icon 3">
+                </div>
+                <div class="social-icon">
+                    <img src="img/you.svg" alt="social icon 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
+

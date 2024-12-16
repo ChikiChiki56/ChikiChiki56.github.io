@@ -1,10 +1,76 @@
+/* Загальні стилі */
 body {
     margin: 0;
+    padding-top: 116px; /* Висота меню + відступ */
     font-family: Urbanist, sans-serif;
-    background-color: #141414;
-    color: #fff;
+    background-color: #141414; /* Темний колір за замовчуванням */
+    color: #fff; /* Білий текст */
     line-height: 1.5;
+    transition: background-color 0.5s, color 0.5s;
 }
+
+/* Світла тема */
+body.light-theme {
+    background-color: #f0f0f0; /* Світлий фон */
+    color: #333; /* Темний текст */
+}
+
+/* Тумблер */
+.theme-toggle {
+    display: flex;
+    flex-direction: column; /* Розташування елементів вертикально */
+    align-items: center; /* Центруємо по горизонталі */
+    gap: 5px;
+    margin: 10px;
+}
+
+/* Текст для мобільної версії */
+#theme-text {
+    font-size: 12px; /* Зменшений шрифт для мобільних пристроїв */
+    font-weight: bold;
+    color: inherit;
+    text-align: center; /* Центруємо текст */
+}
+
+
+#theme-switch {
+    display: none;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Темна тема */
+#theme-switch:checked + .toggle-label {
+    background-color: #4a4a4a; /* Темний фон */
+}
+
+#theme-switch:checked + .toggle-label .toggle-circle {
+    transform: translateX(30px); /* Переміщення */
+    background-color: #f0f0f0; /* Колір кола */
+}
+
+
 .banner {
     background-color: #1a1a1a;
     background-image: url('../img/BACKGROUND.svg'); /* Додаємо фон у вигляді зображення */
@@ -56,11 +122,21 @@ body {
 }
 .navbar {
     background-color: #1a1a1a;
-    padding: 20px 80px; /* Зменшено відступи */
+    padding: 10px 80px; /* Зменшені відступи для зафіксованого меню */
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    position: fixed; /* Фіксоване меню */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Пріоритет над іншими елементами */
+    transition: background-color 0.3s ease; /* Плавна зміна кольору */
+}
+
+.navbar.scrolled {
+    background-color: rgba(20, 20, 20, 0.9); /* Змінений колір при прокрутці */
 }
 .navbar .logo {
     width: 160px;
@@ -2092,6 +2168,25 @@ const swiper = new Swiper('.swiper-container', {
     border-radius: 8px;
 }
 
+/* Стилі для розмиття фону */
+/* Базові стилі для розмиття */
+.modal-blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Тінь з розмиттям */
+    backdrop-filter: blur(8px); /* Розмиття фону */
+    z-index: 1000; /* Менше за модальне вікно */
+    display: none; /* Сховано за замовчуванням */
+}
+
+/* SweetAlert2 вікно */
+.swal2-popup {
+    z-index: 1001 !important; /* Вище за розмиття */
+    position: relative; /* Виправлення для руху */
+}
 
 /*404*/
 
@@ -3198,5 +3293,29 @@ const swiper = new Swiper('.swiper-container', {
     }
     .property-grid {
         display: none;
+    }
+}
+
+/* Зменшення тумблера для мобільних пристроїв */
+@media (max-width: 768px) {
+    .toggle-label {
+        width: 40px; /* Зменшена ширина */
+        height: 20px; /* Зменшена висота */
+    }
+
+    .toggle-circle {
+        width: 16px;
+        height: 16px;
+        top: 2px; /* Коригуємо позицію кола */
+        left: 2px;
+    }
+
+    #theme-switch:checked + .toggle-label .toggle-circle {
+        transform: translateX(20px); /* Зсув для меншого тумблера */
+    }
+
+    /* Текст під тумблером */
+    #theme-text {
+        font-size: 10px;
     }
 }

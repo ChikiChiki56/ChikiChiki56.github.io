@@ -133,10 +133,11 @@ body.light-theme {
     right: 0;
     z-index: 1000; /* Пріоритет над іншими елементами */
     transition: background-color 0.3s ease; /* Плавна зміна кольору */
+    z-index: 1000; /* Пріоритет */
 }
-
-.navbar.scrolled {
-    background-color: rgba(20, 20, 20, 0.9); /* Змінений колір при прокрутці */
+.navbar.transparent {
+    background-color: rgba(26, 26, 26, 0.8); /* Напівпрозорий чорний фон */
+    transition: background-color 0.5s ease; /* Плавний перехід */
 }
 .navbar .logo {
     width: 160px;
@@ -2576,6 +2577,7 @@ const swiper = new Swiper('.swiper-container', {
         flex-direction: column;
         gap: 5px;
         position: relative;
+        z-index: 1100;
     }
     .burger-menu span {
         width: 30px;
@@ -2585,10 +2587,17 @@ const swiper = new Swiper('.swiper-container', {
     }
     
     .mobile-menu {
-        transition: all 0.3s ease; /* Плавний перехід */
-        opacity: 0; /* Початково приховане */
-        transform: translateY(-20px); /* Зсув для ефекту */
-        pointer-events: none; /* Забороняємо кліки */
+        display: none;
+        position: fixed;
+        top: 80px; /* Вирівнюємо під головним меню */
+        left: 0;
+        right: 0;
+        background-color: #1a1a1a;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
     }
     .mobile-menu .menu-item {
         font-size: 18px;
@@ -2598,9 +2607,9 @@ const swiper = new Swiper('.swiper-container', {
     }
     
     .mobile-menu.open {
-        opacity: 1; /* Відображаємо меню */
-        transform: translateY(0); /* Повертаємо на місце */
-        pointer-events: auto; /* Дозволяємо кліки */
+        display: flex; /* Показати меню */
+        opacity: 1;
+        transform: translateY(0);
     }
 
 /* Для мобільних пристроїв */
@@ -2630,35 +2639,40 @@ const swiper = new Swiper('.swiper-container', {
     }
 
     .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 60px; /* Регулюйте відповідно до висоти заголовка */
+        position: fixed;
+        top: 80px; /* Висота основного navbar */
         left: 0;
-        right: 0;
+        width: 100%;
         background-color: #1a1a1a;
-        padding: 20px;
+        z-index: 999; /* Поверх всього контенту */
+        display: none;
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        z-index: 1000;
+        gap: 10px;
+        padding: 20px;
     }
-
+    
     .mobile-menu.open {
         display: flex;
+    }
+    
+    /* Забороняємо скрол сторінки при відкритому меню */
+    body.no-scroll {
+        overflow: hidden;
     }
 
     .burger-menu {
         display: flex;
-        cursor: pointer;
         flex-direction: column;
         gap: 5px;
+        cursor: pointer;
     }
-
+    
     .burger-menu span {
-        background: white;
-        height: 3px;
+        background-color: #fff;
         width: 25px;
+        height: 3px;
         border-radius: 2px;
+        transition: all 0.3s ease;
     }
 }
 

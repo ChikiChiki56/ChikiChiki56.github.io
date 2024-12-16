@@ -1,0 +1,35 @@
+{
+    "creator": {
+        "name": "Oleh Mykhalchuk",
+        "role": "Web Developer",
+        "description": "Passionate about creating modern, responsive, and engaging websites.",
+        "image": "img/creator.JPG"
+    },
+    "siteDescription": "Welcome to Estatein – your gateway to finding dream properties. Explore, dream, and discover your perfect home.",
+    "properties": [
+        {
+            "id": 1,
+            "name": "Seaside Serenity Villa",
+            "description": "A luxurious 4-bedroom, 3-bathroom villa located in a peaceful suburban neighborhood with a private pool and garden.",
+            "price": "$550,000",
+            "image": "img/Villa.svg",
+            "details": "This villa features spacious interiors, modern amenities, and stunning views of the countryside."
+        },
+        {
+            "id": 2,
+            "name": "Metropolitan Haven",
+            "description": "A fully-furnished 2-bedroom apartment with panoramic city views.",
+            "price": "$550,000",
+            "image": "img/Haven.svg",
+            "details": "This apartment includes state-of-the-art facilities and close proximity to shopping centers."
+        },
+        {
+            "id": 3,
+            "name": "Rustic Retreat Cottage",
+            "description": "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.",
+            "price": "$550,000",
+            "image": "img/Cottage.svg",
+            "details": "Perfect for families, this cottage offers safety, privacy, and a charming rustic design."
+        }
+    ]
+}

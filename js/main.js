@@ -64,6 +64,24 @@ if (isIndexPage()) {
                     color: '#fff',
                     didClose: () => removeBlurEffect(),
                 });
+
+                // Додаємо модальні вікна для кнопок "View Property Details"
+                const properties = data.properties;
+                document.querySelectorAll('.view-details6').forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        const property = properties[index];
+                        Swal.fire({
+                            title: property.name,
+                            text: property.details,
+                            imageUrl: property.image,
+                            imageWidth: 300,
+                            imageHeight: 200,
+                            confirmButtonText: 'Close',
+                            background: '#1a1a1a',
+                            color: '#fff'
+                        });
+                    });
+                });
             })
             .catch(error => console.error('Error loading JSON:', error));
     });
@@ -90,7 +108,7 @@ const themeText = document.getElementById('theme-text');
 
 function loadTheme() {
     const isDarkMode = localStorage.getItem('dark-mode') === 'true';
-    themeSwitch.checked = isDarkMode;
+    if (themeSwitch) themeSwitch.checked = isDarkMode;
     applyTheme(isDarkMode);
 }
 
@@ -98,34 +116,37 @@ function applyTheme(isDarkMode) {
     if (isDarkMode) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        themeText.textContent = 'Dark Mode: ON';
+        if (themeText) themeText.textContent = 'Dark Mode: ON';
     } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        themeText.textContent = 'Dark Mode: OFF';
+        if (themeText) themeText.textContent = 'Dark Mode: OFF';
     }
 }
 
-themeSwitch?.addEventListener('change', () => {
-    const isDarkMode = themeSwitch.checked;
-    applyTheme(isDarkMode);
-    localStorage.setItem('dark-mode', isDarkMode);
-});
+if (themeSwitch) {
+    themeSwitch.addEventListener('change', () => {
+        const isDarkMode = themeSwitch.checked;
+        applyTheme(isDarkMode);
+        localStorage.setItem('dark-mode', isDarkMode);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     loadTheme();
     initSwiper();
 });
 
+// Додаємо клас для прозорості navbar при прокрутці
 document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar'); // Ваше меню
-
-    // Додаємо клас для прозорості при прокрутці
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) { // Якщо сторінка прокручена більше ніж на 50px
-            navbar.classList.add('transparent');
-        } else {
-            navbar.classList.remove('transparent');
-        }
-    });
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('transparent');
+            } else {
+                navbar.classList.remove('transparent');
+            }
+        });
+    }
 });

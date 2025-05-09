@@ -4,3 +4,4 @@ Disallow: /private/
 Allow: /admin/help.html
 
 Sitemap: https://chikichiki56.github.io/sitemap.xml
+Sitemap: https://chikichiki56.github.io/sitemap.xml
